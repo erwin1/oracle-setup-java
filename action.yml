@@ -63,7 +63,7 @@ runs:
         fi
     - name: 'Install Java Development Kit'
       if: ${{ inputs.install  == 'true' }}
-      uses: actions/setup-java@v3
+      uses: erwin1/setup-java@feature/fix-local-java-mac
       with:
         java-version: ${{ steps.download.outputs.version }}
         distribution: jdkfile
